@@ -1,29 +1,55 @@
-// const elements = [
-//   { buttonText: "AC" },
-//   { buttonText: "0" },
-//   { buttonText: "1" },
-//   { buttonText: "2" },
-//   { buttonText: "3" },
-//   { buttonText: "4" },
-//   { buttonText: "5" },
-//   { buttonText: "6" },
-//   { buttonText: "7" },
-//   { buttonText: "8" },
-//   { buttonText: "9" },
-//   { buttonText: "+" },
-//   { buttonText: "-" },
-//   { buttonText: "x" },
-//   { buttonText: "÷" },
-//   { buttonText: "=" },
-//   { buttonText: "%" },
-//   { buttonText: "." },
-//   { buttonText: "+/-" },
-// ];
-// const parent = document.getElementById("grid-container");
-// for (let i = 0; i < elements.length; i++) {
-//   let div = document.createElement("div");
-//   let button = document.createElement("button");
-//   button.innerHTML = elements[i].buttonText;
-//   div.appendChild(button);
-//   parent.appendChild(div);
-// }
+const numberButtons = document.querySelectorAll("[data-number]");
+const operationButtons = document.querySelectorAll("[data-operator]");
+const equalsButton = document.querySelector("[data-equals]");
+const deleteButton = document.querySelector("[data-delete]");
+const allClearButton = document.querySelector("[data-all-clear]");
+const previousOperandTextElement = document.querySelector(
+  "[data-previous-operand]"
+);
+const currentOperandTextElement = document.querySelector(
+  "[data-current-operand]"
+);
+
+//the functionalities
+const sum = function(a,b){
+    let c = a+b;
+    return c;
+}
+const subtract = function(min,max){
+    let result = max - min;
+    return result;
+
+}
+const multiply = function(a,b){
+    let c =a*b;
+    return c;
+}
+const divide = function(a,b){
+    let c = a/b;
+    return c;
+}
+
+switch(a,b){
+    case "+": 
+    a+b;
+    break;
+
+    case "-": 
+    a-b;
+    break;
+
+    case "x": 
+    a*b;
+    break;
+
+    case "÷": 
+    a/b;
+    break;
+
+
+}
+const equals
+const allClear
+const del
+//I don't know what I'm doing lol 
+
