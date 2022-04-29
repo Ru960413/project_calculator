@@ -30,40 +30,58 @@ function divide(a, b) {
 }
 
 // Create a new function operate that takes an operator and 2 numbers and then calls one of the above functions on the numbers.
-function calculate(a, b, c) {
-  let result;
-  try {
-    switch (c) {
-      case "+":
-        result = a + b;
-        break;
-      case "-":
-        result = a - b;
-        break;
-      case "*":
-        result = a * b;
-        break;
-      case "/":
-        if (b === 0) {
-          throw "Can't divide by 0!";
-        } else {
-          result = a / b;
-        }
-        break;
-    }
-  } catch (e) {
-    console.log("There's an error:", e);
-  }
-  return result;
-}
-
-console.log(calculate(13, 15, "*"));
-
-// function display() {
-//   calculate(13, 15, "*");
-//   currentData = document.getElementById("data-current-operand");
+// function calculate(number1, number2, operator) {
+//   let result;
+//   try {
+//     switch (operator) {
+//       case "+":
+//         result = number1 + number2;
+//         break;
+//       case "-":
+//         result = number1 - number2;
+//         break;
+//       case "*":
+//         result = number1 * number2;
+//         break;
+//       case "/":
+//         if (number2 === 0) {
+//           throw "Can't divide by 0!";
+//         } else {
+//           result = number1 / number2;
+//         }
+//         break;
+//     }
+//   } catch (e) {
+//     console.log("There's an error:", e);
+//   }
+//   return result.toFixed(6);
 // }
-// display();
+
+// console.log(calculate(13, 15, "*"));
+
+function display(val) {
+  document.getElementById("result").value += val;
+  return val;
+}
+display();
+
+function clearDisplay() {
+  document.getElementById("result").value = "";
+}
+clearDisplay();
+
+function backward() {
+  const display = document.getElementById("result");
+  display.value = display.value.substring(0, display.value.length - 1);
+}
+backward();
+
+function calculate() {
+  let display = document.getElementById("result").value;
+  let y = eval(display);
+  document.getElementById("result").value = y;
+  return y;
+}
 
 /*switch ((a, b)) {
   case "+":

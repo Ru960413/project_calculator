@@ -35,7 +35,7 @@ body {
 .span-two {
   grid-column: span 3;
 }
-#calculator-container > button {
+#calculator-container > input {
   border-color: white;
   background-color: thistle;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -43,17 +43,19 @@ body {
   font-weight: 600;
 }
 
-#calculator-container > button:hover {
+#calculator-container > input:hover {
   background-color: hsla(239, 92%, 86%, 0.9);
 }
 
 .current-operand,
 .previous-operand {
+  background-color: inherit;
   display: block;
   height: 75px;
   width: 390px;
   text-align: right;
   font-size: 2.5rem;
+  border: none;
 }
 .current-operand {
   color: aliceblue;
